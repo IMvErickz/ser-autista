@@ -1,12 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
+import { DataProps } from "@/@types/News";
 
-export function Apresentation() {
+export function Apresentation(props: DataProps) {
     return (
         <div className="w-[900px] h-[186px] flex flex-row items-center justify-center gap-x-9">
-            <img src="./noticia.png" alt="" className="w-[344px] h-[186px]" />
+            <Image src={props.imgUrl} width={344} height={18} alt="" className="rounded" />
             <div className="size-full flex flex-col pt-1 gap-y-1">
-                <Link href='/news' className="text-blue-450 font-bold text-2xl leading-9 hover:underline">
-                    Título da Notícia número 1
+                <Link href={`/news/${props.id}`} className="text-blue-450 font-bold text-2xl leading-9 hover:underline">
+                    {props.title}
                 </Link>
                 <div className="w-[532px] h-[90px]">
                     <p className="font-normal text-sm text-zinc-750 text-justify">
