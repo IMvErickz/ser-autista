@@ -23,13 +23,12 @@ export function NewsInfo(props: NewsInfoProps) {
     }, [])
 
     return (
-        <section className="w-full h-full flex flex-col items-center justify-center gap-y-6 pt-9 pb-10">
+        <section className="sm:w-full w-[600px] h-full flex flex-col items-center justify-center gap-y-6 pt-9 pb-10 px-36">
             <header className="w-full flex items-center justify-start">
                 <h1 className="text-blue-450 font-bold text-4xl leading-10">{data?.title}</h1>
             </header>
-            <img src={data?.imgUrl} alt="" className="w-[764px] h-[315.76px]" />
-            <div className="w-[752px] h-max flex flex-col items-start justify-center gap-y-4">
-                <h2 className="text-zinc-450 font-bold text-xl leading-9">Subtítulo da notícia</h2>
+            <img src={data?.imgUrl} alt="" className="w-[764px]" />
+            <div className="w-full h-max flex flex-col items-start justify-center gap-y-4">
                 <p className="text-zinc-750 font-normal text-sm leading-5 text-justify">
                     {data?.content}
                 </p>

@@ -3,7 +3,7 @@ import { LastNews } from "./LastNews";
 
 export function Aside() {
     return (
-        <aside className="flex flex-col items-center justify-center gap-y-4 py-10">
+        <aside className="w-full sm:max-w-sm flex flex-col items-center justify-center gap-y-4 py-10">
             <div className="w-[268px] h-[175px] flex items-center justify-center bg-white shadow-4xl">
                 <LogoSerAutista />
             </div>
