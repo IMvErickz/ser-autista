@@ -7,7 +7,6 @@ import { UserRound } from 'lucide-react'
 export function Avatar() {
 
     const [color, setColor] = useState('')
-    console.log(color)
 
     function getRandomColor() {
         // Gerar valores aleatórios para os componentes de cor (RGB)

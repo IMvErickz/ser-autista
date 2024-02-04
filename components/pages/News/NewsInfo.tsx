@@ -14,13 +14,12 @@ export function NewsInfo(props: NewsInfoProps) {
 
     const { handleSetId } = useContext(NewsContext)
 
-    handleSetId(props.id)
-
     const [data, setData] = useState<DataProps>()
 
     useEffect(() => {
         async function getNewsInfo() {
             const response = await api.get(`/news/${props.id}`)
+            handleSetId(props.id)
             setData(response.data.news)
         }
         getNewsInfo()

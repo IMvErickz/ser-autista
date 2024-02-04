@@ -3,7 +3,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Avatar } from "./Avatar";
 import { NewsContext } from "@/context/NewsContext";
-import { api } from "@/lib/axios";
 
 interface CommentProps {
     author: string

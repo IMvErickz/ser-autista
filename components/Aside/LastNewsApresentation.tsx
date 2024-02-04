@@ -14,7 +14,7 @@ export function LastNewsApresentation() {
         <>
             {data?.map(news => {
                 return (
-                    <LastNews key={news.id} imageUrl={news.imgUrl} title={news.titleExcert as string} />
+                    <LastNews key={news.id} imageUrl={news.imgUrl} title={news.titleExcert as string} id={news.id} />
                 )
             })}
         </>
