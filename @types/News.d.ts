@@ -4,4 +4,5 @@ export declare interface DataProps {
     imgUrl: string
     id: string
     excert?: string
+    titleExcert?: string
 }
