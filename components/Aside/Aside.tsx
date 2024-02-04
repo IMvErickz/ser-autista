@@ -5,7 +5,7 @@ export function Aside() {
     return (
         <aside className="w-full sm:max-w-sm flex flex-col items-center justify-center gap-y-4 py-10">
             <div className="w-[268px] h-[175px] flex items-center justify-center bg-white shadow-4xl">
-                <LogoSerAutista />
+                <LogoSerAutista height="300" />
             </div>
             <div className="w-[272px] h-[90px] flex items-center justify-center">
                 <p className="font-normal text-sm leading-5 text-justify text-zinc-750">
