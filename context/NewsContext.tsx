@@ -32,12 +32,12 @@ export function NewsContextProvider({ children }: ProviderProps) {
         getLastNews()
     }, [])
 
-    function handleSetId(id: string) {
-        setId(id)
+    function handleSetId(newId: string) {
+        setId(newId)
     }
 
-    async function getComments(id: string) {
-        await api.get(`/comment/${id}`)
+    async function getComments(newId: string) {
+        await api.get(`/comment/${newId}`)
             .then(res => {
                 setComments(res.data.comments)
             })

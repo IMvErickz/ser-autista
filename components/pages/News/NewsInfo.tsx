@@ -12,12 +12,11 @@ interface NewsInfoProps {
 
 export function NewsInfo(props: NewsInfoProps) {
 
-    const [data, setData] = useState<DataProps>()
-    console.log(data?.title)
-
     const { handleSetId } = useContext(NewsContext)
 
     handleSetId(props.id)
+
+    const [data, setData] = useState<DataProps>()
 
     useEffect(() => {
         async function getNewsInfo() {

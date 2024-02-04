@@ -16,7 +16,7 @@ export function Comment() {
 
     useEffect(() => {
         getComments(id)
-    }, [])
+    }, [id])
 
     return (
         <>
