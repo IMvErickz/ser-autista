@@ -22,11 +22,11 @@ export function Aside() {
                     <LastNewsApresentation />
                 </div>
             </div>
-            <div className="w-[70%] flex flex-col items-center justify-center gap-y-4 border-2 border-solid border-blue-450 p-6 shadow-4xl rounded">
+            <div className="w-full flex flex-col items-center justify-center gap-y-4 border-2 border-solid border-blue-450 p-6 shadow-4xl rounded">
                 <p className="text-blue-450 text-2xl text-center font-bold">Olá! Adorei seu projeto e gostaria de contribuir.</p>
                 <a
                     href="https://api.whatsapp.com/send?phone=5547997787872" target="_blank"
-                    className=" bg-blue-450 text-center rounded-md font-semibold hover:bg-blue-450/80 transition-colors"
+                    className=" bg-blue-450 py-2 px-4 text-center rounded-md font-semibold hover:bg-blue-450/80 transition-colors"
                 >
                     Entre em contato pelo Whatsapp
                 </a>

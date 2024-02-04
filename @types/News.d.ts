@@ -6,3 +6,8 @@ export declare interface DataProps {
     excert?: string
     titleExcert?: string
 }
+
+export declare interface CommentProps {
+    author: string
+    content: string
+}
