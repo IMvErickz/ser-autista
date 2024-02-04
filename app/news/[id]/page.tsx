@@ -1,4 +1,3 @@
-import { CommentContainer } from "@/components/Comments/CommentContainer";
 import { NewsInfo } from "@/components/pages/News/NewsInfo";
 import { Metadata } from 'next'
 
