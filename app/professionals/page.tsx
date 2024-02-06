@@ -15,8 +15,6 @@ export default function Professionals() {
 
             <div className="size-full flex flex-col items-center justify-center gap-y-7 pt-20">
                 <Professional />
-                <Professional />
-                <Professional />
             </div>
         </section>
     )
