@@ -71,7 +71,7 @@ export function CreateCommentModal() {
                                 {...register('content')}
                             />
                         </div>
-                        <button className='bg-blue-450 py-2 px-4 rounded hover:bg-blue-450/80 transition-colors'>Enviar</button>
+                        <button type='submit' className='bg-blue-450 py-2 px-4 rounded hover:bg-blue-450/80 transition-colors'>Enviar</button>
                     </form>
                     <Dialog.Close asChild>
                         <button

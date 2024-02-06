@@ -11,3 +11,11 @@ export declare interface CommentProps {
     author: string
     content: string
 }
+
+
+export declare interface DoubtProps {
+    author: string
+    question: string
+    id: string
+    createdAt: string
+}
