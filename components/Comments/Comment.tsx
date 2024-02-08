@@ -1,13 +1,8 @@
 'use client'
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Avatar } from "./Avatar";
 import { NewsContext } from "@/context/NewsContext";
-
-interface CommentProps {
-    author: string
-    content: string
-}
 
 export function Comment() {
 
