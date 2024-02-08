@@ -3,6 +3,7 @@
 import { DoubtProps } from "@/@types/News"
 import { Avatar } from "@/components/Comments/Avatar"
 import { api } from "@/lib/axios"
+import axios from "axios"
 import { useEffect, useState } from "react"
 
 interface AnswerProps {
@@ -17,12 +18,12 @@ export default function DoubtId({ params }: { params: { id: string } }) {
     const [answers, setAnswer] = useState<AnswerProps[]>([])
 
     async function getDoubtId() {
-        const res = await api.get(`/doubt/${params.id}`)
+        const res = await axios.get(`/api/doubt/${params.id}`)
         return res
     }
 
     async function getAnswer() {
-        return await api.get(`/answer/${params.id}`)
+        return await axios.get(`/api/answer/${params.id}`)
     }
 
     useEffect(() => {

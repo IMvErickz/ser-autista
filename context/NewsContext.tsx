@@ -1,7 +1,7 @@
 'use client'
 
 import { DataProps, CommentProps } from "@/@types/News";
-import { api } from "@/lib/axios";
+import axios from "axios";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
 interface NewsContextProps {
@@ -26,7 +26,7 @@ export function NewsContextProvider({ children }: ProviderProps) {
 
     useEffect(() => {
         async function getLastNews() {
-            const res = await api.get('/news')
+            const res = await axios.get('/api/news')
             setData(res.data.response)
         }
         getLastNews()
@@ -37,7 +37,7 @@ export function NewsContextProvider({ children }: ProviderProps) {
     }
 
     async function getComments(newId: string) {
-        await api.get(`/comment/${newId}`)
+        await axios.get(`/api/comment/${newId}`)
             .then(res => {
                 setComments(res.data.comments)
             })

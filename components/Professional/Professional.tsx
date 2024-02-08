@@ -1,6 +1,6 @@
 'use client'
 
-import { api } from "@/lib/axios"
+import axios from "axios"
 import { useEffect, useState } from "react"
 
 interface ProfessionalProps {
@@ -16,7 +16,7 @@ export function Professional() {
     const [data, setData] = useState<ProfessionalProps[]>([])
 
     async function GetProfessional() {
-        const res = await api.get('/professional')
+        const res = await axios.get('/api/professional')
         setData(res.data.professional)
     }
 
