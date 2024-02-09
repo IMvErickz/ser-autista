@@ -2,7 +2,6 @@
 
 import { DoubtProps } from "@/@types/News";
 import axios from "axios";
-import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -27,7 +26,6 @@ export function List() {
                         <h3 className="text-black font-semibold text-xl hover:underline">
                             {doubt.question}
                         </h3>
-                        <MoveRight color="#000" />
                     </Link>
                 )
             })}
