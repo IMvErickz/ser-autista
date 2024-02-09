@@ -8,7 +8,7 @@ datasource db {
 }
 
 model Answer {
-  id      String @id
+  id      String @id @default(uuid())
   author  String
   content String
   doubtId String
@@ -16,7 +16,7 @@ model Answer {
 }
 
 model Comments {
-  id        String   @id
+  id        String   @id @default(uuid())
   author    String
   content   String
   createdAt DateTime @default(now())
@@ -25,7 +25,7 @@ model Comments {
 }
 
 model Doubt {
-  id        String   @id
+  id        String   @id @default(uuid())
   question  String
   author    String
   createdAt DateTime @default(now())
@@ -33,13 +33,13 @@ model Doubt {
 }
 
 model Images {
-  id   String @id
+  id   String @id @default(uuid())
   key  String
   News News[]
 }
 
 model News {
-  id        String     @id
+  id        String     @id @default(uuid())
   title     String
   content   String
   createdAt DateTime?
@@ -51,7 +51,7 @@ model News {
 }
 
 model Professional {
-  id       String  @id
+  id       String  @id @default(uuid())
   name     String
   number   String?
   address  String?
