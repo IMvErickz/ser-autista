@@ -3,7 +3,7 @@
 import { DataProps } from "@/@types/News"
 import { CommentContainer } from "@/components/Comments/CommentContainer"
 import { NewsContext } from "@/context/NewsContext"
-import axios from "axios"
+import { api } from "@/lib/axios"
 import { useContext, useEffect, useState } from "react"
 
 interface NewsInfoProps {
@@ -19,7 +19,7 @@ export function NewsInfo(props: NewsInfoProps) {
     useEffect(() => {
         async function getNewsInfo() {
 
-            const response = await axios.get(`/api/news/${props.id}`)
+            const response = await api.get(`/news/${props.id}`)
             setData(response.data.news)
         }
         getNewsInfo()
