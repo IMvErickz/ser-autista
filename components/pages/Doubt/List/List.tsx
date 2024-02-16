@@ -2,7 +2,6 @@
 
 import { DoubtProps } from "@/@types/News";
 import { api } from "@/lib/axios";
-import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
