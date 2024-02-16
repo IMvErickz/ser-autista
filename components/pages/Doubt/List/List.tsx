@@ -1,6 +1,7 @@
 'use client'
 
 import { DoubtProps } from "@/@types/News";
+import { api } from "@/lib/axios";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -10,7 +11,7 @@ export function List() {
     const [data, setData] = useState<DoubtProps[]>([])
 
     async function getDoubt() {
-        const res = await axios.get('/api/doubt')
+        const res = await api.get('/doubt')
         setData(res.data.doubt)
     }
 

@@ -2,7 +2,6 @@
 
 import { api } from "@/lib/axios"
 import { zodResolver } from "@hookform/resolvers/zod"
-import axios from "axios"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
@@ -22,13 +21,21 @@ export function DoubtForm() {
         const { author, question } = data
         try {
             if (!author) {
-                await axios.post('/api/doubt', {
+                await api.post('/doubt', {
                     author: 'Anônimo',
                     question
                 })
+                await api.post('/email', {
+                    name: 'Anônimo',
+                    question
+                })
             } else {
-                await axios.post('/api/doubt', {
+                await api.post('/doubt', {
                     author,
+                    question
+                })
+                await api.post('/email', {
+                    name: author,
                     question
                 })
             }
