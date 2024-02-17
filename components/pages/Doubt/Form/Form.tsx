@@ -24,20 +24,24 @@ export function DoubtForm() {
                 await api.post('/doubt', {
                     author: 'Anônimo',
                     question
+                }).then(() => {
+                    api.post('/send', {
+                        author: 'Anônimo',
+                        question
+                    })
                 })
-                await api.post('/email', {
-                    name: 'Anônimo',
-                    question
-                })
+
             } else {
                 await api.post('/doubt', {
                     author,
                     question
+                }).then(() => {
+                    api.post('/send', {
+                        author,
+                        question
+                    })
                 })
-                await api.post('/email', {
-                    name: author,
-                    question
-                })
+
             }
         } catch (err) {
             throw err
