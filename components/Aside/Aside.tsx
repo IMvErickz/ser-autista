@@ -1,5 +1,8 @@
 import { LogoSerAutista } from "@/public/icons/Logo";
 import { LastNewsApresentation } from './LastNewsApresentation'
+import { InstagramLogo } from "@/assets/icons/instagram";
+import Image from "next/image";
+import Instagram from '/assets/icons/instagram 1.svg'
 
 export function Aside() {
     return (
@@ -11,6 +14,11 @@ export function Aside() {
                 <p className="font-normal text-sm leading-5 text-justify text-zinc-750">
                     A ONG Ser Autista é uma ONG que auxiliana integração e atendimento de crianças com TEA.
                 </p>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/serautista.ong.br?igsh=MTdvZ3A2MDFwaHBxag%3D%3D&utm_source=qr" target="_blank">
+                    <Image src={Instagram} width={60} height={60} alt="Ser Altista" />
+                </a>
             </div>
             <div className="w-[268px] h-max flex flex-col items-center justify-center bg-white shadow-4xl">
                 <header>

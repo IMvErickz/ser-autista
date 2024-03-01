@@ -10,6 +10,7 @@ export function Header() {
                 <Link href="/" className="text-blue-450 text-sm font-bold leading-4">Home</Link>
                 <Link href="/professionals" className="text-blue-450 text-sm font-bold leading-4">Profissionais</Link>
                 <Link href="/doubt" className="text-blue-450 text-sm font-bold leading-4">Dúvidas</Link>
+                <Link href="/about" className="text-blue-450 text-sm font-bold leading-4">Sobre Nós</Link>
             </nav>
         </header>
     )
