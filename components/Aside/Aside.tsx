@@ -1,6 +1,5 @@
 import { LogoSerAutista } from "@/public/icons/Logo";
 import { LastNewsApresentation } from './LastNewsApresentation'
-import { InstagramLogo } from "@/assets/icons/instagram";
 import Image from "next/image";
 import Instagram from '/assets/icons/instagram 1.svg'
 
