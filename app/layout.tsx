@@ -5,13 +5,15 @@ import { Header } from "@/components/Header/Header";
 import { Aside } from "@/components/Aside/Aside";
 import { Footer } from "@/components/Footer/Footer";
 import { NewsContextProvider } from "@/context/NewsContext";
-import { DefaultSeo } from 'next-seo'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ser Autista",
-  description: "Blog ser autista",
+  title: {
+    template: '%s | Ser Autista',
+    default: 'Ser Autista'
+  },
+  description: "Blog ser autista, com informações relevantes sobre esse mundo maravilhoso.",
 };
 
 export default function RootLayout({
@@ -25,14 +27,6 @@ export default function RootLayout({
         <link rel="icon" href="/icons/favicon.png" />
       </head>
       <body className={inter.className}>
-      <DefaultSeo
-          openGraph={{
-            type: 'website',
-            locale: 'pt_BR',
-            url: 'https://serautista.ong.br/',
-            siteName: 'Ser Autista',
-          }}
-        />
         <NewsContextProvider>
           <Header />
           <main className="flex flex-col sm:flex-row items-start justify-center gap-y-36 sm:gap-x-36 bg-white sm:px-0 px-6">

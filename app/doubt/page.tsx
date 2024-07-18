@@ -1,7 +1,11 @@
 import { DoubtForm } from "@/components/pages/Doubt/Form/Form";
-import Link from "next/link";
-import { MoveRight } from 'lucide-react'
 import { List } from "@/components/pages/Doubt/List/List";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Dúvidas',
+    description: 'Dúvidas',
+}
 
 export default function Doubt() {
     return (

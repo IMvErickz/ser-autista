@@ -2,7 +2,7 @@ import { Professional } from "@/components/Professional/Professional";
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Ser Autista/Profissionais',
+    title: 'Profissionais',
     description: 'Profissionais',
 }
 
