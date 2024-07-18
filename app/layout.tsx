@@ -9,8 +9,11 @@ import { NewsContextProvider } from "@/context/NewsContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ser Autista",
-  description: "Blog ser autista",
+  title: {
+    template: '%s | Ser Autista',
+    default: 'Ser Autista'
+  },
+  description: "Blog ser autista, com informações relevantes sobre esse mundo maravilhoso.",
 };
 
 export default function RootLayout({
