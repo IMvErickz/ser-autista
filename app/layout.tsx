@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     template: '%s | Ser Autista',
     default: 'Ser Autista'
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   description: "Blog ser autista, com informações relevantes sobre esse mundo maravilhoso.",
 };
 
