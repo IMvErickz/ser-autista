@@ -27,7 +27,7 @@ export function AboutUsContainer() {
     }, []);
     return (
         <section className="size-full flex flex-col items-center justify-center py-12 px-8 gap-y-8">
-            <Image src={'/serAutista.jpg'} width={600} height={600} alt="Ser Altista" />
+            <Image src={'/serAutista.webp'} width={600} height={600} alt="Ser Altista" />
             <div id="container" className="text-black text-xl">
                 {content}
             </div>
